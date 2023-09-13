@@ -41,17 +41,18 @@ public class Coup {
         return Objects.hash(nom);
     }
 
-    public static Coup saisirCoup(Scanner sc){
-        Coup coup = null;
-            String nom = sc.nextLine();
-            if (nom.equals("papier") || nom.equals("pierre") || nom.equals("ciseaux")) {
-                try {
-                    coup = new Coup(nom);
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-            }
-        return coup;
+    public static Coup saisirCoup(Scanner scanner) {
+        String coupSaisi;
+        try{
+            System.out.print("Veuillez saisir un coup (pierre, papier, ou ciseaux) : ");
+            coupSaisi = scanner.nextLine();
+            return new Coup(coupSaisi);
+
+        }
+        catch (PasCoup e) {
+            System.out.print("Coup invalide. Veuillez saisir un coup correct : ");
+            return saisirCoup(scanner);
+        }
     }
 
     public String getNom() {
