@@ -3,6 +3,7 @@ public abstract class Joueur {
     protected String nom ;
     protected  int score ;
     protected  Coup coupCourant;
+    private  Strategie strategie;
 
     public Joueur(String nom) {
         this.nom = nom ;
