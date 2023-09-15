@@ -1,0 +1,6 @@
+En gros le probleme c'est que au debut ca marche mais lorsque Changement rentre en jeu lors du 3eme tour ca foire tout car l'appel de getNom
+se fait entre le moment du changement et avant l'execution de l'algo qui determine le tour,
+la structure c'est pas moi qui l'ai decidé c'est la prof et elle confirmé notre structure et notre systeme de changement avec liste,
+le but est de faire changer de strategie de jeu tous les 2 tours, vous pouvz toujours revenir aux version anterieure
+
+Ayoub

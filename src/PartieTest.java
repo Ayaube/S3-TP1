@@ -21,7 +21,7 @@ public class PartieTest {
             pap = new Coup("papier");
             pie = new Coup("pierre");
             j1 = new Humain("Arthur");
-            j2 = new Machine();
+            j2 = new Machine(new Changement());
             j1.setScore(4);
             j2.setScore(4);
             ancien1 = j1.getScore();

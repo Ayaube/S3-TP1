@@ -1,16 +1,13 @@
-public class Machine extends Joueur{
+public class Machine extends Joueur {
+    private Strategie strategie;
 
-    private int tour;
-    private int mode;
-
-    public Machine(){
+    public Machine(Strategie strategie) {
         super("IA");
-        tour = 1;
-        this.mode = 0;
+        this.strategie = strategie;
     }
 
     @Override
     public void choisitUnCoup() throws PasCoup {
-
+        this.coupCourant = strategie.choisirCoup();
     }
 }
